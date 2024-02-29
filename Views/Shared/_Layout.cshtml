@@ -17,6 +17,12 @@
     <link href="~/css/shopcatagory.css" rel="stylesheet" asp-append-version="true" />
     <link href="/css/login.css" rel="stylesheet" asp-append-version="true" />
     <link href="/css/cartitems.css" rel="stylesheet" asp-append-version="true" />
+    <link href="/css/about.css" rel="stylesheet" asp-append-version="true" />
+@*      <link href="/css/offices.css" rel="stylesheet" asp-append-version="true" />
+    <link href="/css/Product.css" rel="stylesheet" asp-append-version="true" />
+    <link href="/css/company.css" rel="stylesheet" asp-append-version="true" />  *@
+
+
 
 
 
@@ -51,13 +57,15 @@
             </ul>
 
             
-               <div class="nav-login-cart">
+               <div class="">
+                <div class="nav-login-cart">
                     <a type="submit" class="button text-decoration-none" asp-action="Login" asp-controller="Home">Login</a>
-                </div> 
+                </div>
 
                 <div class="nav-Sign-cart">
-                      <a type="submit" class="button text-decoration-none" asp-action="Signup" asp-controller="Home">Sign up</a>
-                </div>  
+                    <a type="submit" class="button text-decoration-none" asp-action="Signup" asp-controller="Home">Sign up</a>
+                </div>
+            </div> 
 
                 <div>
                     <a class="button" asp-action="Cart" asp-controller="Home">
@@ -81,10 +89,10 @@
             <p>TimeTrove</p>
         </div>
         <ul class="footer-links">
-            <li>@Html.ActionLink("Company", "Index", "Company")</li>
-            <li>@Html.ActionLink("Product", "Index", "Products")</li>
-            <li>@Html.ActionLink("Offices", "Index", "Offices")</li>
-            <li>@Html.ActionLink("About", "Index", "About")</li>
+            <li>@Html.ActionLink("Company", "Company","Home")</li>
+            <li>@Html.ActionLink("Product", "Product", "Home")</li>
+            <li>@Html.ActionLink("Offices", "Offices", "Home")</li>
+            <li>@Html.ActionLink("About", "About", "Home")</li>
         </ul>
         <div class="footer-social-icon">
             <div class="footer-icons-container">

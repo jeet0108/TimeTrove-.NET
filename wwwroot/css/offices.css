@@ -1,0 +1,53 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.office-info {
+    display: flex;
+}
+
+.office-details,
+.online-contact {
+    flex: 1;
+    padding: 20px;
+}
+
+    .office-details h2,
+    .online-contact h2 {
+        color: #333;
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .office-details p,
+    .contact-label {
+        margin-bottom: 15px;
+        color: #666;
+        line-height: 1.5;
+    }
+
+        .office-details span,
+        .contact-label .label {
+            font-weight: bold;
+        }
+
+        .contact-label .value a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+            .contact-label .value a:hover {
+                text-decoration: underline;
+            }

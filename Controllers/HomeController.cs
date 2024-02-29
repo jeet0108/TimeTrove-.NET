@@ -52,6 +52,23 @@ namespace TimeTrove.Controllers
         {
             return View();
         }
+        public IActionResult About() 
+        {
+            return View();
+        }
+        public IActionResult Company()
+        {
+            return View();
+        }
+        public IActionResult Offices() 
+        {
+            return View();
+        }
+        public IActionResult Product()
+        {
+            return View();
+        }
+
    
 
     }
