@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - TimeTrove</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/Navbar.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/TimeTrove.styles.css" asp-append-version="true" />
+    <link href="~/css/footer.css" rel="stylesheet" asp-append-version="true" />
+    <link href="~/css/navbar.css" rel="stylesheet" asp-append-version="true" />
+    <link href="~/css/hero.css" rel="stylesheet"  asp-append-version="true"/>
+    <link href="~/css/popular.css" rel="stylesheet"  asp-append-version="true"/>
+    <link href="~/css/offer.css" rel="stylesheet" asp-append-version="true" />
+    <link href="~/css/newcollection.css" rel="stylesheet" asp-append-version="true" />
+    <link href="~/css/shopcatagory.css" rel="stylesheet" asp-append-version="true" />
+    <link href="/css/login.css" rel="stylesheet" asp-append-version="true" />
+    <link href="/css/cartitems.css" rel="stylesheet" asp-append-version="true" />
+
+
+
+
+
+
+
+</head>
+<body>
+    <header>
+        <div class="navbar navbar-expand-lg">
+            <div class="nav-logo">
+                @*<!-- <img src="@logo" alt="nav-logo" /> -->*@
+                <p>TimeTrove</p>
+            </div>
+            <img src="~/images/nav_dropdown.png " class="nav-dropdown" />
+            
+            <ul class="nav-menu" id="menuRef">
+                <li >
+                    <a class="button text-decoration-none" asp-action="Index" asp-controller="Home">Shop</a>
+                </li>
+                <li>
+                    <a class="button text-decoration-none" asp-action="Mens" asp-controller="Home">Mens</a>
+                </li>
+                <li>
+                    <a class="button text-decoration-none" asp-action="Womens" asp-controller="Home">Womens</a>
+                </li>
+                <li>
+                    <a class="button text-decoration-none" asp-action="Kids" asp-controller="Home">Kids</a>
+                </li>
+
+            </ul>
+
+            
+               <div class="nav-login-cart">
+                    <a type="submit" class="button text-decoration-none" asp-action="Login" asp-controller="Home">Login</a>
+                </div> 
+
+                <div class="nav-Sign-cart">
+                      <a type="submit" class="button text-decoration-none" asp-action="Signup" asp-controller="Home">Sign up</a>
+                </div>  
+
+                <div>
+                    <a class="button" asp-action="Cart" asp-controller="Home">
+                        <img src="~/images/cart_icon.png" />
+                    </a>
+                <div class="nav-cart-count"></div>
+                </div>
+            
+        </div>
+
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer-logo">
+            <img src="@Url.Content("~/Images/logo.png")" alt="" />
+            <p>TimeTrove</p>
+        </div>
+        <ul class="footer-links">
+            <li>@Html.ActionLink("Company", "Index", "Company")</li>
+            <li>@Html.ActionLink("Product", "Index", "Products")</li>
+            <li>@Html.ActionLink("Offices", "Index", "Offices")</li>
+            <li>@Html.ActionLink("About", "Index", "About")</li>
+        </ul>
+        <div class="footer-social-icon">
+            <div class="footer-icons-container">
+                <img src="@Url.Content("~/Images/youtube_icon.png")" alt="" />
+            </div>
+            <div class="footer-icons-container">
+                <img src="@Url.Content("~/Images/linkedin_icon.png")" alt="" />
+            </div>
+            <div class="footer-icons-container">
+                <img src="@Url.Content("~/Images/x_icon.png")" alt="" />
+            </div>
+            <div class="footer-icons-container">
+                <img src="@Url.Content("~/Images/facebook_icon.png")" alt="" />
+            </div>
+            <div class="footer-icons-container">
+                <img src="@Url.Content("~/Images/instagram_icon.png")" alt="" />
+            </div>
+            <div class="footer-icons-container">
+                <img src="@Url.Content("~/Images/whatsapp_icon.png")" alt="" />
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <hr />
+            <p>Copyright @DateTime.Now.Year - All Rights Reserved</p>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

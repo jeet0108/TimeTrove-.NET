@@ -1,0 +1,87 @@
+﻿.shopcategory-banner {
+    display: block;
+    margin: 30px auto;
+    width: 82%;
+
+}
+
+.shopcategory-indexSort {
+    display: flex;
+    margin: 0px 170px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.shopcategory-sort {
+    padding: 5px 5px;
+    border-radius: 30px;
+    border: 1px solid #888;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+    .shopcategory-sort img {
+        height: 90%;
+        padding-left:3px;
+    }
+
+    .shopcategory-sort p {
+        color: #000;
+        font-family: Judson;
+        font-size: 38px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        padding-top:10px;      
+        
+    }
+
+.shopcategory-indexSort p {
+    color: #000;
+    font-family: Judson;
+    font-size: 20px;
+    font-style: normal;
+    line-height: normal;
+
+}
+
+    .shopcategory-indexSort p span {
+        font-weight: 600;
+        color: #000;
+        font-family: Judson;
+        font-size: 28px;
+        font-style: normal;
+        line-height: normal;
+    }
+
+
+.shopcategory-products {
+    
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    row-gap: 40px;
+/*    padding-right:50px;
+*/
+    padding-left:50px;
+    
+}
+
+.shopcategory-loadmore {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 130px auto;
+    width: 233px;
+    height: 69px;
+    border-radius: 75px;
+    background: #ededed;
+    color: #787878;
+    font-family: Junge;
+    font-size: 20px;
+    font-weight: 500;
+}
+.shopcategory-products img{
+    height:350px;
+}
+
