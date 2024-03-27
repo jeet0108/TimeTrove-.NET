@@ -56,16 +56,43 @@
 
             </ul>
 
-            
-               <div class="">
-                <div class="nav-login-cart">
-                    <a type="submit" class="button text-decoration-none" asp-action="Login" asp-controller="Home">Login</a>
+            @if (!string.IsNullOrEmpty(Context.Session.GetString("Name")))
+            {
+               
+
+                //<a class="nav-link" style="color:aliceblue; font-size:large; font-style:oblique"></a>
+
+
+                <div class="">
+                    <div class="nav-login-cart">
+                        <a type="submit" class="button text-decoration-none" asp-action="Login" asp-controller="Home"><b>@(Context.Session.GetString("Name"))</b></a>
+                        
+                    </div>
+                    <div class="nav-login-cart">
+                        <a class="nav-link" asp-action="Logout" asp-controller="Home">Logout</a>
+                        
+                    </div>
+                    
+
                 </div>
 
-                <div class="nav-Sign-cart">
-                    <a type="submit" class="button text-decoration-none" asp-action="Signup" asp-controller="Home">Sign up</a>
+            }
+            else
+            {
+                <div class="">
+                    <div class="nav-login-cart">
+                        <a type="submit" class="button text-decoration-none" asp-action="Login" asp-controller="Home">Login</a>
+                    </div>
+
+                    <div class="nav-Sign-cart">
+                        <a type="submit" class="button text-decoration-none" asp-action="Signup" asp-controller="Home">Sign up</a>
+                    </div>
                 </div>
-            </div> 
+
+            }
+
+            
+              
 
                 <div>
                     <a class="button" asp-action="Cart" asp-controller="Home">

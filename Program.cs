@@ -1,8 +1,17 @@
+using Microsoft.EntityFrameworkCore;
+using TimeTrove.Data;
+using Microsoft.AspNetCore.Session;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddSession();
 
+builder.Services.AddDbContext<UserdbContext>(j =>
+{
+    j.UseSqlServer(builder.Configuration.GetConnectionString("con"));
+    
+}); 
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -17,7 +26,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-
+app.UseSession();
 app.UseAuthorization();
 
 app.MapControllerRoute(

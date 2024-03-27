@@ -1,16 +1,28 @@
 ﻿
-<div class="loginsignup">
+
+
+
+
+<form action="" method="post">
+    <div class="loginsignup">
         <div class="loginsignup-container">
+           
             <h1>Login</h1>
-            <div class="loginsignup-fields">
-                <input type="email" placeholder="Email Address">
-                <input type="password" placeholder="Password">
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <label style="color:red">@ViewBag.Notification</label>
+                </div>
             </div>
-            <button>Continue</button>
-            <p class="loginsignup-login">Create new account - <span><a class="" href="/Signin">Sign in</a></span></p>
+            <div class="loginsignup-fields">
+                <input type="email" name="Email" placeholder="Email Address">
+                <input type="password" name="Pass" placeholder="Password">
+            </div>
+            <button type="submit" name="submit">Continue</button>
+            <p class="loginsignup-login">Create new account - <span><a class="" asp-action="Signup" asp-controller="Home">Sign in</a></span></p>
             <div class="loginsignup-agree">
                 <input type="checkbox" name="" id="">
                 <p>By continuing, I agree to the terms of use & privacy policy.</p>
             </div>
         </div>
-</div>
+    </div>
+</form>

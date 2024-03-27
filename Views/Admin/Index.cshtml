@@ -1,0 +1,14 @@
+﻿@model IEnumerable<TimeTrove.Models.Register>
+@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<link rel="stylesheet" href="~/css/sidebar.css" />
+
+<div class="sidebar">
+    <a asp-action="Details" asp-controller="Admin" style="text-decoration: none;">
+        <div class="sidebar-item">
+            <img src="list_product_icon" alt="" />
+            <p>Product List</p>
+        </div>
+    </a>
+</div>
