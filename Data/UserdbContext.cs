@@ -12,5 +12,10 @@ namespace TimeTrove.Data
 
         public DbSet<Register> Users { get; set; }
         public DbSet<Nadmin> Admin { get; set; }
+
+        public DbSet<productDisplay> productDisplays { get; set; }
+        public DbSet<Men> Men { get; set; }
+        public DbSet<Men> Women { get; set; }
+        public DbSet<Men> Kids { get; set; }
     }
 }

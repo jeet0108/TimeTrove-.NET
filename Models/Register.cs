@@ -5,7 +5,7 @@ namespace TimeTrove.Models
     {
         [Key]
         public int Id { get; set; }
-        [Required(ErrorMessage ="Please Enter your name")]
+        [Required(ErrorMessage = "Please Enter your name")]
         public required string Name { get; set; }
         [Required(ErrorMessage = "Please Enter your Email")]
         public required string Email { get; set; }

@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TimeTrove.Data;
 
@@ -10,9 +11,11 @@ using TimeTrove.Data;
 namespace TimeTrove.Migrations
 {
     [DbContext(typeof(UserdbContext))]
-    partial class UserdbContextModelSnapshot : ModelSnapshot
+    [Migration("20240328071732_Kids")]
+    partial class Kids
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

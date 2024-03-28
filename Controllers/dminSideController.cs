@@ -4,23 +4,26 @@ using TimeTrove.Models;
 
 namespace TimeTrove.Controllers
 {
-    public class AdminController : Controller
+    public class dminSideController : Controller
     {
         private readonly UserdbContext db;
 
-        public AdminController(UserdbContext db)
+        public dminSideController(UserdbContext db)
         {
             this.db = db;
         }
         public IActionResult Index()
         {
-            Nadmin de = new();
-            return View(de);
+            return View();
         }
+
+        [HttpGet]
         public IActionResult Details()
         {
-            IEnumerable<Register> admin = db.Users;
-            return View(admin);
+            IEnumerable<Register> users = db.Users.ToList();
+            return View(users);
         }
     }
 }
+
+

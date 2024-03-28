@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
 using TimeTrove.Data;
 using TimeTrove.Models;
@@ -61,7 +62,7 @@ namespace TimeTrove.Controllers
                 HttpContext.Session.SetString("profile", adminLogin.profile);
                 TempData["Message"] = "Welcome, " + adminLogin.Name.ToString();
 
-                return RedirectToAction("Index", "Admin");
+                return RedirectToAction("Index", "dminSide");
 
             }
 
@@ -120,21 +121,91 @@ namespace TimeTrove.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+        [HttpGet]
+        public IActionResult ProductDisplay(int id)
+        {
+            
+                // Fetch data from database based on id
+                productDisplay product = db.productDisplays.FirstOrDefault(p => p.Id == id);
 
+                if (product == null)
+                {
+                    return NotFound(); // Or handle accordingly
+                }
+
+            var productList = new List<productDisplay>() { product };
+
+            return View(productList);
+            
+        } 
+        [HttpGet]
+        public IActionResult KidDisplay(int id)
+        {
+
+            // Fetch data from database based on id
+            Men kid = db.Kids.FirstOrDefault(p => p.Id == id);
+
+            if (kid == null)
+                {
+                    return NotFound(); // Or handle accordingly
+                }
+
+            var productList = new List<Men>() { kid };
+
+            return View(productList);
+            
+        } 
+        [HttpGet]
+        public IActionResult WomenDisplay(int id)
+        {
+            
+                // Fetch data from database based on id
+                Men women = db.Women.FirstOrDefault(p => p.Id == id);
+
+                if (women == null)
+                {
+                    return NotFound(); // Or handle accordingly
+                }
+
+            var productList = new List<Men>() { women };
+
+            return View(productList);
+            
+        } 
+        [HttpGet]
+        public IActionResult ManDisplay(int id)
+        {
+            
+                // Fetch data from database based on id
+                Men man = db.Men.FirstOrDefault(p => p.Id == id);
+
+                if (man == null)
+                {
+                    return NotFound(); // Or handle accordingly
+                }
+
+            var productList = new List<Men>() { man };
+
+            return View(productList);
+            
+        }
         public IActionResult Cart()
         {
             return View();
         }
         public IActionResult Mens()
         {
-            return View();
+            IEnumerable<Men> Men = db.Men;
+            return View(Men);
         }
         public IActionResult Womens()
         {
-            return View();
+            IEnumerable<Men> Women = db.Women;
+            return View(Women);
         }
         public IActionResult Kids() {
-            return View();
+            IEnumerable<Men> Kids = db.Kids;
+            return View(Kids);
         }
        
         public IActionResult About() 
@@ -154,7 +225,12 @@ namespace TimeTrove.Controllers
             return View();
         }
 
-   
+        public IActionResult Details()
+        {
+            IEnumerable<Register> users = db.Users.ToList();
+            return View(users);
+        }
+
 
     }
 

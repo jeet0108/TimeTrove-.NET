@@ -1,0 +1,89 @@
+﻿@model IEnumerable<TimeTrove.Models.productDisplay>
+
+<link rel="stylesheet" href="~/css//productdisplay.css" />
+
+    @foreach (var p in Model)
+    {
+        <div class="productdisplay">
+            <div class="productdisplay-left">
+                <div class="productdisplay-img-list">
+                    <img src="/images/@p.image" alt="">
+                    <img src="/images/@p.image" alt="">
+                    <img src="/images/@p.image" alt="">
+                    <img src="/images/@p.image" alt="">
+                    <img src="/images/@p.image" alt="">
+                </div>
+                <div class="productdisplay-img">
+                    <img class="productdisplay-main-img" src="/images/@p.image" alt="">
+                </div>
+            </div>
+            <div class="productdisplay-right">
+                <h1>@p.Name</h1>
+                <div class="productdisplay-right-stars">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAARCAYAAADQWvz5AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFGSURBVHgBpVNLUsJAEH0dihTlKt4g3kDcgkiWgSrBE0hOYHkCvYEegRuAC4VykxR+1t5APIHZWH5i0o7RwAypTPy8Vef1qzfTPS9ACfh2esDX05MyHWlN/ImNKu7Tj7XEpq3uQ5HW0Bmhyv1F/QRPJ9UbgXrL0tjRKosaylgZopd1cvbCQiOenQ/ynUoPJI2WcjRGHJ+pwjik1u6YeHbRh0Ej/AeUeAbi10CUAf6OAG9GsNgRX02OxaBH+BX4kJqd0/RSCv21YF+UdonDHAyPtt0gI3Kv9qOdUVKnRvdOpvI5qpCFMjC1V6m8EWMfpZCCmjGKhz+yUK09rmiGSJjEuNIBFCJ63pDDqd7IrC0DyELMcKjpetTqDMSRn//a/LtpwTSVsKpGzNl+ArxzXXmVhjtEBAdZ5hJsQge+udQLkGauna5BwgfJW2eVUlA2dgAAAABJRU5ErkJggg==" alt="">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAARCAYAAADQWvz5AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFGSURBVHgBpVNLUsJAEH0dihTlKt4g3kDcgkiWgSrBE0hOYHkCvYEegRuAC4VykxR+1t5APIHZWH5i0o7RwAypTPy8Vef1qzfTPS9ACfh2esDX05MyHWlN/ImNKu7Tj7XEpq3uQ5HW0Bmhyv1F/QRPJ9UbgXrL0tjRKosaylgZopd1cvbCQiOenQ/ynUoPJI2WcjRGHJ+pwjik1u6YeHbRh0Ej/AeUeAbi10CUAf6OAG9GsNgRX02OxaBH+BX4kJqd0/RSCv21YF+UdonDHAyPtt0gI3Kv9qOdUVKnRvdOpvI5qpCFMjC1V6m8EWMfpZCCmjGKhz+yUK09rmiGSJjEuNIBFCJ63pDDqd7IrC0DyELMcKjpetTqDMSRn//a/LtpwTSVsKpGzNl+ArxzXXmVhjtEBAdZ5hJsQge+udQLkGauna5BwgfJW2eVUlA2dgAAAABJRU5ErkJggg==" alt="">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAARCAYAAADQWvz5AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADSSURBVHgBhZK9DcIwEIXjo8gasAEjJEV6mADYIFRRKqCI8lfABoyQBRIlI8AG3iKdzR2yI4hteM09WZ/u3cnneag8zwPvh4AAAOjruj65oEXXdTyKopWUMsbK27Z9ziGmTVEUPWMsEEKEaZoOX3Ha+L6/xfLA6CbLsrW1k1pgSfORVx25AblAAyJVVUVxPS7Dx3EMrRCpLMsNlga7HcAF4aY7ZQdwxN0xijodaSZwAHu0lyRJbsZ2M+Cs3+Fj0KsNmCAE6HNjG/CO01fgAib9u6cXvwlrKVZSRnsAAAAASUVORK5CYII=" alt="">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAARCAYAAADQWvz5AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFGSURBVHgBpVNLUsJAEH0dihTlKt4g3kDcgkiWgSrBE0hOYHkCvYEegRuAC4VykxR+1t5APIHZWH5i0o7RwAypTPy8Vef1qzfTPS9ACfh2esDX05MyHWlN/ImNKu7Tj7XEpq3uQ5HW0Bmhyv1F/QRPJ9UbgXrL0tjRKosaylgZopd1cvbCQiOenQ/ynUoPJI2WcjRGHJ+pwjik1u6YeHbRh0Ej/AeUeAbi10CUAf6OAG9GsNgRX02OxaBH+BX4kJqd0/RSCv21YF+UdonDHAyPtt0gI3Kv9qOdUVKnRvdOpvI5qpCFMjC1V6m8EWMfpZCCmjGKhz+yUK09rmiGSJjEuNIBFCJ63pDDqd7IrC0DyELMcKjpetTqDMSRn//a/LtpwTSVsKpGzNl+ArxzXXmVhjtEBAdZ5hJsQge+udQLkGauna5BwgfJW2eVUlA2dgAAAABJRU5ErkJggg==" alt="">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAARCAYAAADQWvz5AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFGSURBVHgBpVNLUsJAEH0dihTlKt4g3kDcgkiWgSrBE0hOYHkCvYEegRuAC4VykxR+1t5APIHZWH5i0o7RwAypTPy8Vef1qzfTPS9ACfh2esDX05MyHWlN/ImNKu7Tj7XEpq3uQ5HW0Bmhyv1F/QRPJ9UbgXrL0tjRKosaylgZopd1cvbCQiOenQ/ynUoPJI2WcjRGHJ+pwjik1u6YeHbRh0Ej/AeUeAbi10CUAf6OAG9GsNgRX02OxaBH+BX4kJqd0/RSCv21YF+UdonDHAyPtt0gI3Kv9qOdUVKnRvdOpvI5qpCFMjC1V6m8EWMfpZCCmjGKhz+yUK09rmiGSJjEuNIBFCJ63pDDqd7IrC0DyELMcKjpetTqDMSRn//a/LtpwTSVsKpGzNl+ArxzXXmVhjtEBAdZ5hJsQge+udQLkGauna5BwgfJW2eVUlA2dgAAAABJRU5ErkJggg==" alt="">
+                    <p>(122)</p>
+                </div>
+                <div class="productdisplay-right-prices">
+                    <div class="productdisplay-right-price-old">₹@p.oldprice</div>
+                    <div class="productdisplay-right-price-new">₹@p.newprice</div>
+                </div>
+                <div class="productdisplay-right-description">A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.</div>
+                <button>ADD TO CART</button>
+                <p class="productdisplay-right-category"><span>Category : </span>Women</p>
+                <p class="productdisplay-right-category"><span>Tags : </span>Modern, Latest</p>
+            </div>
+        </div>
+        <div class="descriptionbox">
+            <div class="descriptionbox-navigator">
+                <div class="descriptionbox-nav-box">Description</div>
+                <div class="descriptionbox-nav-box fade">Reviews (122)</div>
+            </div>
+            <div class="descriptionbox-description">
+                <p>An e-commerce website is an online platform that facilitates buying and selling of products or services over the internet. it serves as a virtual marketplace where businesses and individuals showcase their products, interact with customers, and conduct transactions without the need for a physical presence. E-commerce websites have gained immense popularity due to their convenience accessibility, and the global reach they offer.</p>
+                <p>E-commerce websites typically display products or services along with detailed descriptions, images, prices and any available variations (e.g, sizes, colors). Each product usually has it's own dedicated page with relevant information.</p>
+            </div>
+        </div>
+        <div class="relatedproducts">
+            <h1>Related Products</h1>
+            <hr>
+            <div class="relatedproducts-item">
+                <div class="item">
+                    <a href="/product/1"><img src="/images/p4_img.png" alt=""></a>
+                    <p>Small Edit Emerald Mesh</p>
+                    <div class="item-prices">
+                        <div class="item-price-new">₹ 16,999</div>
+                        <div class="item-price-old">₹ 19,999</div>
+                    </div>
+                </div>
+                <div class="item">
+                <a href="/product/2"><img src="/images/p2_img.png" alt=""></a>
+                    <p>Small Edit Grey</p>
+                    <div class="item-prices">
+                        <div class="item-price-new">₹ 9,999</div>
+                        <div class="item-price-old">₹ 13,999</div>
+                    </div>
+                </div>
+                <div class="item">
+                <a href="/product/3"><img src="/images/p3_img.png" alt=""></a>
+                    <p>DKNY Soho Three-Hand Nude Leather Watch</p>
+                    <div class="item-prices">
+                        <div class="item-price-new">₹ 19,999</div>
+                        <div class="item-price-old">₹ 23,999</div>
+                    </div>
+                </div>
+                <div class="item">
+                <a href="/product/4"><img src="/images/p4_img.png" alt=""></a>
+                    <p>Serein Mid Two-Tone 18K Gold Diamond Dial Watch</p>
+                    <div class="item-prices">
+                        <div class="item-price-new">₹ 29,999</div>
+                        <div class="item-price-old">₹ 33,999</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    }

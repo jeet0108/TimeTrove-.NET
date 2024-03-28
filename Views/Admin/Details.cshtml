@@ -1,4 +1,5 @@
-﻿@model IEnumerable<TimeTrove.Models.Register>
+﻿@model IEnumerable<Register>
+
 
 @{
     ViewData["Title"] = "User Details";
@@ -40,8 +41,8 @@
                                           <td>@u.Email</td>
                                           <td>@u.Pass</td>
                                           <td>
-                                            <a asp-action="Edit" asp-controller="Studentregister" asp-route-id="@u.Id">Edit</a>
-                                            <a asp-action="Delete" asp-controller="Studentregister" asp-route-id="@u.Id">Delete</a>
+                                            <a asp-action="Edit" asp-controller="Admin" asp-route-id="@u.Id">Edit</a>
+                                            <a asp-action="Delete" asp-controller="Admin" asp-route-id="@u.Id">Delete</a>
 
                                           </td>
                                     </tr>

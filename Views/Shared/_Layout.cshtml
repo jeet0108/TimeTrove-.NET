@@ -18,6 +18,7 @@
     <link href="/css/login.css" rel="stylesheet" asp-append-version="true" />
     <link href="/css/cartitems.css" rel="stylesheet" asp-append-version="true" />
     <link href="/css/about.css" rel="stylesheet" asp-append-version="true" />
+    <script src="~/js/site.js" asp-append-version="true"></script>
 @*      <link href="/css/offices.css" rel="stylesheet" asp-append-version="true" />
     <link href="/css/Product.css" rel="stylesheet" asp-append-version="true" />
     <link href="/css/company.css" rel="stylesheet" asp-append-version="true" />  *@
@@ -53,6 +54,11 @@
                 <li>
                     <a class="button text-decoration-none" asp-action="Kids" asp-controller="Home">Kids</a>
                 </li>
+                <a asp-action="Details" asp-controller="Home" style="color:black">
+
+                    User List
+
+                </a>
 
             </ul>
 
@@ -148,7 +154,7 @@
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+ 
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
