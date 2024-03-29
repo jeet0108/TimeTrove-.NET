@@ -1,0 +1,33 @@
+﻿@model Register
+@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    ViewData["Title"] = "Add User";
+}
+
+<link href="/css/login.css" rel="stylesheet" asp-append-version="true" />
+
+
+<div class="form-container" style="padding-top:150px">
+
+    <form action="" method="post">
+        <div class="loginsignup">
+            <div class="loginsignup-container">
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <label style="color:red">@ViewBag.Notification</label>
+                    </div>
+                </div>
+                <h3 style="color:black">Add user</h3>
+                <div class="loginsignup-fields">
+                    <input type="text" name="Name" placeholder="Your Name" />
+                    <input type="email" name="Email" placeholder="Email Address">
+                    <input type="password" name="Pass" placeholder="Password">
+                </div>
+
+                <button type="submit" name="submit">Add</button>
+                <p>Back to <a asp-action="userShow" asp-controller="Admin">Details</a></p>
+            </div>
+        </div>
+    </form>
+
+</div>

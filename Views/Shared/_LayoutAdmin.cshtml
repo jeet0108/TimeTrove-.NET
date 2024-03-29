@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Nadmin>
+﻿
 @{
     string profile = Context.Session.GetString("profile");
 }
@@ -12,21 +12,23 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="~/css/adminnav.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link href="/css/login.css" rel="stylesheet" asp-append-version="true" />
 
 
 </head>
 <body>
     <header>
-        
+
         <div class='navbar'>
             <img src="/images/nav-logo.svg" className='nav-logo' alt="" />
-          @if (!string.IsNullOrEmpty(Context.Session.GetString("profile")))
+            @if (!string.IsNullOrEmpty(Context.Session.GetString("profile")))
             {
-               
-            <img src="@profile" className='nav-profile' alt="" />
-               }
+                <img src="@profile" class="nav-profile" alt="" style="width: 60px; border-radius: 50%;" />
+                <a class="nav-link" asp-action="Logout" asp-controller="Home">Logout</a>
+            }
         </div>
-       
+            
+
     </header>
 
 

@@ -11,8 +11,8 @@ using TimeTrove.Data;
 namespace TimeTrove.Migrations
 {
     [DbContext(typeof(UserdbContext))]
-    [Migration("20240328071348_Men")]
-    partial class Men
+    [Migration("20240330030800_Women")]
+    partial class Women
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

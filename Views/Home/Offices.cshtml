@@ -1,24 +1,61 @@
-﻿<div class="container">
-    <div class="office-info">
-        <div class="office-details">
-            <h2>Office Name</h2>
-            <p><span>Location:</span> RKU, Rajkot, India</p>
-            <p><span>Phone:</span> +91 98765 43210</p>
-            <p><span>Email:</span> ttsupport@tt.com</p>
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Project Location</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUC6OomR_wjNn1acXR8B-dc5vahAHIKdk"></script>
+    <style>
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="office-info">
+            <div class="office-details">
+                <h2>Office Name</h2>
+                <p><span>Location:</span> RKU, Rajkot, India</p>
+                <p><span>Phone:</span> +91 98765 43210</p>
+                <p><span>Email:</span> ttsupport@tt.com</p>
+            </div>
+
+            <div class="online-contact">
+                <h2>Online Contact Information</h2>
+                <div class="contact-label">
+                    <div class="label">Website:</div>
+                    <div class="value"><a href="https://www.timetrove.com">www.timetrove.com</a></div>
+                </div>
+                <div class="contact-label">
+                    <div class="label">Contact Form:</div>
+                    <div class="value"><a href="https://www.timetrove.com/contact">www.timetrove.com/contact</a></div>
+                </div>
+            </div>
         </div>
 
-        <div class="online-contact">
-            <h2>Online Contact Information</h2>
-            <div class="contact-label">
-                <div class="label">Website:</div>
-                <div class="value"><a href="https://www.timetrove.com">www.timetrove.com</a></div>
-            </div>
-            <div class="contact-label">
-                <div class="label">Contact Form:</div>
-                <div class="value"><a href="https://www.timetrove.com/contact">www.timetrove.com/contact</a></div>
-            </div>
-        </div>
-
-
+        <h1>Project Location</h1>
+        <div id="map"></div>
     </div>
-</div>
+
+    <script>
+        function initMap() {
+            // Coordinates of your project location
+            var projectLocation = { lat: 40.7128, lng: -74.0060 }; // Example coordinates for New York City
+
+            // Create a map centered at the project location
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 15,
+                center: projectLocation
+            });
+
+            // Add a marker at the project location
+            var marker = new google.maps.Marker({
+                position: projectLocation,
+                map: map,
+                title: 'Project Location'
+            });
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUC6OomR_wjNn1acXR8B-dc5vahAHIKdk&callback=initMap"></script>
+</body>
+</html>

@@ -50,7 +50,7 @@ namespace TimeTrove.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Login(Register register, Nadmin admin)
+        public IActionResult Login(Register register, Admin admin)
         {
 
             var adminLogin = db.Admin.Where(x => x.Email == admin.Email && x.Pass == admin.Pass).Select(x => new { x.Id, x.Name,x.profile }).FirstOrDefault();
@@ -62,7 +62,7 @@ namespace TimeTrove.Controllers
                 HttpContext.Session.SetString("profile", adminLogin.profile);
                 TempData["Message"] = "Welcome, " + adminLogin.Name.ToString();
 
-                return RedirectToAction("Index", "dminSide");
+                return RedirectToAction("Index", "Admin");
 
             }
 
@@ -96,6 +96,7 @@ namespace TimeTrove.Controllers
 
         public IActionResult Logout() { 
             HttpContext.Session.Clear();
+            HttpContext.Session.Remove("profile");
             return RedirectToAction("Index", "Home");
 
         }

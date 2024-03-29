@@ -23,7 +23,7 @@
             </div>
         </div>
         <div class="item">
-            <a href="/product/2"><img src="/images/p2_img.png" alt=""></a>
+            <a href="/product/2"><img src="/images/p4_img.png" alt=""></a>
             <p>Small Edit Grey</p>
             <div class="item-prices">
                 <div class="item-price-new">₹ 9,999</div>
@@ -31,7 +31,7 @@
             </div>
         </div>
         <div class="item">
-            <a href="/product/3"><img src="/images/p2_img.png" alt=""></a>
+            <a href="/product/3"><img src="/images/p3_img.png" alt=""></a>
             <p>DKNY Soho Three-Hand Nude Leather Watch</p>
             <div class="item-prices">
                 <div class="item-price-new">₹ 19,999</div>
@@ -39,7 +39,7 @@
             </div>
         </div>
         <div class="item">
-            <a href="/product/4"><img src="/images/p2_img.png" alt=""></a>
+            <a href="/product/4"><img src="/images/p1_img.png" alt=""></a>
             <p>Serein Mid Two-Tone 18K Gold Diamond Dial Watch</p>
             <div class="item-prices">
                 <div class="item-price-new">₹ 29,999</div>
@@ -136,8 +136,17 @@
 
 
 <script>
-    
+    // Get the button element
+    const scrollToNewCollectionButton = document.getElementById('scrollToNewCollection');
 
+    // Add click event listener to the button
+    scrollToNewCollectionButton.addEventListener('click', () => {
+        // Get the new-collections section element
+        const newCollectionSection = document.getElementById('new-collection');
+
+        // Scroll to the new-collections section smoothly
+        newCollectionSection.scrollIntoView({ behavior: 'smooth' });
+    });
 </script>
 
 
