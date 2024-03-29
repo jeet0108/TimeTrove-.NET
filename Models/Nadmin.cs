@@ -14,8 +14,9 @@ namespace TimeTrove.Models
             [Required(ErrorMessage = "Please Enter your Password")]
             public  string Pass { get; set; }
             
-            public  string profile { get; set; }    
+            public  string profile { get; set; }
 
-        
+
     }
+
 }
