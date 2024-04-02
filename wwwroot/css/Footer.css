@@ -16,14 +16,14 @@ a {
     gap: 20px;
 }
 
-    .footer-logo p {
-        color: #000;
-        font-family: Jura;
-        font-size: 36px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: normal;
-    }
+.footer-logo p {
+    color: #000;
+    font-family: Jura;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
 
 .footer-links {
     display: flex;
@@ -33,9 +33,9 @@ a {
     font-size: 20px;
 }
 
-    .footer-links li {
-        cursor: pointer;
-    }
+.footer-links li {
+    cursor: pointer;
+}
 
 .footer-social-icon {
     display: flex;
@@ -60,21 +60,21 @@ a {
     font-size: 20px;
 }
 
-    .footer-copyright hr {
-        width: 1400px;
-        height: 3px;
-        background: #C5C5C5;
-    }
+.footer-copyright hr {
+    width: 1400px;
+    height: 3px;
+    background: #C5C5C5;
+}
 
-    .footer-copyright p {
-        color: #000;
-        text-align: center;
-        font-family: Calibri;
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-    }
+.footer-copyright p {
+    color: #000;
+    text-align: center;
+    font-family: Calibri;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
 
 .footer-logo img {
     padding-top: 15px;
