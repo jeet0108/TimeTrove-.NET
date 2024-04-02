@@ -14,7 +14,8 @@ namespace TimeTrove.Models
             public string newprice { get; set; }
 
             public string oldprice { get; set; }
-            public string image { get; set; }
+
+            public string image {get: set:}
 
         }
      public class Women
