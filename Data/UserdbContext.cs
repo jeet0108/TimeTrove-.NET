@@ -5,17 +5,17 @@ namespace TimeTrove.Data
 {
     public class UserdbContext : DbContext
     {
-        public UserdbContext(DbContextOptions<UserdbContext> s) : base(s) 
+        public UserdbContext(DbContextOptions<UserdbContext> options) : base(options) 
         {
             
         }
 
         public DbSet<Register> Users { get; set; }
-        public DbSet<Admin> Admin { get; set; }
+        public DbSet<Admin> Admins { get; set; }
 
-        public DbSet<productDisplay> productDisplays { get; set; }
-        public DbSet<Men> Men { get; set; }
-        public DbSet<Men> Women { get; set; }
-        public DbSet<Men> Kids { get; set; }
+        public DbSet<ProductDisplay> ProductDisplays { get; set; }
+        public DbSet<Men> MenCollection { get; set; }
+        public DbSet<Women> WomenCollection { get; set; }
+        public DbSet<Kids> KidsCollection { get; set; }
     }
 }
